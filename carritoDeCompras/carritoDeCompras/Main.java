@@ -7,6 +7,15 @@ public class Main {
 		// TODO Auto-generated method stub
 
 		Scanner teclado = new Scanner(System.in);
+		int des;
+	do {	
+		Inicio in = new Inicio();
+		in.ui();	
+		
+		System.out.println("Que mas desea hacer? 1 para seguir interactuando, 2 para hacer una compra comprar");
+		des = teclado.nextInt();			
+		}while(des == 1);
+		
 		String nombres[] = { "maní", "mermelada", "pan" };
 		double precios[] = { 22.56, 54.21, 31.43 };
 		String producto = "";
@@ -15,10 +24,10 @@ public class Main {
 		boolean permiso = false;
 		int select = 0;
 		String saborElegido = " ";
-
+		
 		do {
 			try {
-				System.out.println("Bienvenido que desea: ");
+				System.out.println("Que desea llevar? ");
 				int num = 0;
 				for (int i = 0; i < nombres.length; i++) {
 					num++;
